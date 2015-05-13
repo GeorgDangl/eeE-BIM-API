@@ -38,7 +38,7 @@ The following model meta data fields are mandatory:
 In the first version only alternative A1 is supplied, and only for files residing on the server upload folder.
 To upload a file from client the following sequence must be used:
 
-* Upload the file to the server using the [EDM Upload File](edm_upload_file.md) service
+* Upload the file to the server using the [EDM Upload File](edm-file-transfer.md) service
 * Apply the Upload Model service using the returned filename as "Model URL"
 
 

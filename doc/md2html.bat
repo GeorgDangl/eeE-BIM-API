@@ -20,6 +20,7 @@ rem convert the files
 call %MD2_CMD% README
 call %MD2_CMD% repository-services-01\README
 call %MD2_CMD% repository-services-01\nem-feedback
+call %MD2_CMD% repository-services-01\edm_file_transfer
 
 call %MD2_CMD% repository-services-01\a_schemata\README
 call %MD2_CMD% repository-services-01\a_schemata\attachment_meta_data
@@ -32,6 +33,14 @@ call %MD2_CMD% repository-services-01\list_model_service
 call %MD2_CMD% repository-services-01\upload_model_service
 call %MD2_CMD% repository-services-01\upload_model_schema
 call %MD2_CMD% repository-services-01\upload_model_example
+
+call %MD2_CMD% repository-services-01\delete_attachment_service
+call %MD2_CMD% repository-services-01\download_attachment_service
+call %MD2_CMD% repository-services-01\list_attachment_service
+call %MD2_CMD% repository-services-01\upload_attachment_service
+
+call %MD2_CMD% repository-services-01\execute_query_service
+
 rem pause
 goto end
 
