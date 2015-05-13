@@ -20,9 +20,15 @@ rem convert the files
 call %MD2_CMD% README
 call %MD2_CMD% repository-services-01\README
 call %MD2_CMD% repository-services-01\nem-feedback
-call %MD2_CMD% repository-services-01\upload-model\README
-call %MD2_CMD% repository-services-01\upload-model\schema
-pause
+
+call %MD2_CMD% repository-services-01\a_schemata\README
+call %MD2_CMD% repository-services-01\a_schemata\model_meta_data
+call %MD2_CMD% repository-services-01\a_schemata\template_meta_data
+
+call %MD2_CMD% repository-services-01\upload_model_service
+call %MD2_CMD% repository-services-01\upload_model_schema
+call %MD2_CMD% repository-services-01\upload_model_example
+rem pause
 goto end
 
 :end

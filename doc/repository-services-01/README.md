@@ -8,4 +8,7 @@ For feedback and comments on current list see:
 
 Here is the services so far:
 
-* [Upload Model](upload-model/README.md)
+## Upload Model
+* [Upload Model Service](upload_model_service.md)
+* [Upload Model Schema](upload_model_schema.md)
+* [Upload Model Example](upload_model_example.md)
