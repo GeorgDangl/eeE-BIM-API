@@ -22,8 +22,12 @@ call %MD2_CMD% repository-services-01\README
 call %MD2_CMD% repository-services-01\nem-feedback
 
 call %MD2_CMD% repository-services-01\a_schemata\README
+call %MD2_CMD% repository-services-01\a_schemata\attachment_meta_data
 call %MD2_CMD% repository-services-01\a_schemata\model_meta_data
-call %MD2_CMD% repository-services-01\a_schemata\template_meta_data
+
+call %MD2_CMD% repository-services-01\delete_model_service
+call %MD2_CMD% repository-services-01\download_model_service
+call %MD2_CMD% repository-services-01\list_model_service
 
 call %MD2_CMD% repository-services-01\upload_model_service
 call %MD2_CMD% repository-services-01\upload_model_schema

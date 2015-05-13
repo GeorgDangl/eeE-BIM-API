@@ -1,19 +1,19 @@
 # eeE Upload Model Service #
 
-[Level Up](../README.md)
-
+* [Level Up](../README.md)
+* [Overview](./README.md)
 
 ## Upload Model Parameters
 
 I/O/opt	| Parameter | Type | Comment |
 --------|-----------|------|---------|
-In  	|model_meta_data	|[model_meta_data](../a_schemata/model_meta_data.md)	| Model meta data for cretaing, see beolw for madatory fields
+In  	|model_meta_data	|[model_meta_data](./a_schemata/model_meta_data.md)	| Model meta data for cretaing, see beolw for madatory fields
 In		|model_is_external	|booolean	|Indicates if the model data is supplied as attachment (A2:false) or as a model URL (A1:true), 
 In (A1)	|model_content		|URL		| 	A1) URL to model data 
 In (A2)	|model_content		|Attachment	|	A2) Input model data as IFC file, XML file, ... 
 -|-|-|-|-				
 Out 	|Model URL 			|String			|URL to the model data on the target server 
-Out 	|Model Meta Data 	|[model_meta_data](../a_schemata/model_meta_data.md)	|Full model meta data as stored on the server.
+Out 	|Model Meta Data 	|[model_meta_data](./a_schemata/model_meta_data.md)	|Full model meta data as stored on the server.
 
 The following model meta data fields are mandatory:
 
