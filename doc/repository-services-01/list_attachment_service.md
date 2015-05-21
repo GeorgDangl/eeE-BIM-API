@@ -28,8 +28,8 @@ The following attachment meta data fields are used for filtering:
 
 repository_name is given in the resource URL
 
- | |
- --|--|
+Element | Content|
+--------|--------|
 **Resource URL** 	|*GET /eee-repos/{version}/{repository_name}/attachments*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.

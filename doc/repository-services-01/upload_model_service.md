@@ -24,8 +24,8 @@ The following model meta data fields are mandatory:
 
 ##REST interface
 
- | |
- --|--|
+Element | Content|
+--------|--------|
 **Resource URL** 	|*POST /eee-repos/{version}/{repository_name}/models*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.

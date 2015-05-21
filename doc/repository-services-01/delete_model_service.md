@@ -21,8 +21,8 @@ Out  	|model_meta_data	|[model_meta_data](./a_schemata/model_meta_data.md)	| Mod
 
 For consistency, repository_name is given in the resource URL. 
 
- | |
- --|--|
+Element | Content|
+--------|--------|
 **Resource URL** 	|*DELETE /eee-repos/{version}/{repository_name}/models/{model_guid}*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.

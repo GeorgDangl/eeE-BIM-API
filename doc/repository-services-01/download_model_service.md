@@ -21,8 +21,8 @@ Out 	|Model Data		|binary stream			| model data from target server
 
 For consistency, repository_name is given in the resource URL. 
 
- | |
- --|--|
+Element | Content|
+--------|--------|
 **Resource URL** 	|*GET /eee-repos/{version}/{repository_name}/models/{model_guid}*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.
