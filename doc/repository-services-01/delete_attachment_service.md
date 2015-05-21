@@ -21,8 +21,14 @@ Out  	|attachment_meta_data	|[attachment_meta_data](./a_schemata/attachment_meta
 
 For consistency, repository_name is given in the resource URL. 
 
+
 Element | Content|
- --|--|
+--------|--------|
+blabla | blabla
+
+
+Element | Content|
+--------|--------|
 **Resource URL** 	|*DELETE /eee-repos/{version}/{repository_name}/attachments/{attachment_guid}*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.
