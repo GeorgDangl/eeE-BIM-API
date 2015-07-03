@@ -6,7 +6,7 @@
 * [Upload Model Example](./upload_model_example.md)
 
 The schema for “model-meta-data” is same for response and request, but the rules for which fields that are supplied are different.
-The schemata in thhis poage is derived from the "ORIGINAL" meta data schema
+The schemata in this page is derived from the "ORIGINAL" meta data schema
 
 ###JSON Schema
 ```
@@ -23,7 +23,7 @@ The schemata in thhis poage is derived from the "ORIGINAL" meta data schema
 				"guid ": {
 					"type": ["string","null"]
 				},
-				"repository_name": {
+				"project_name": {
 					"type": ["string","null"]
 				},
 				"model_name": {

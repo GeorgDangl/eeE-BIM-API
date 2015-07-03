@@ -17,7 +17,7 @@ For each attachment the following attributes are used for  meta data, as members
  
  Attribute   | Type | Comment |
 -------------|------|---------|
-repository_name |String| States which server repository to use
+project_name |String|Names the project the owning model belongs to
 model_guid	 |String|Unique identifier of the model if attachment is attached to a model with version.
 model_name	 |String|Name of the model of attachment is attached to a model across versions
 attachment_guid	 |String|Unique identifier of the attachment (file). The guid is generated on the server, and differs between versions
@@ -26,7 +26,7 @@ attachment_type	 |String|Type of the attachment (e.g. IFC2x3, XLS, docx, ….)
 attachment_version|String|Version of the model, usually server generated in sthe form of V21,V2,V3,...
 schema_url	 |String|URL to the model schema
 description  |String|Human readable description of the model, informative only, no functionbal impact
-domain_name  |String|Tags the attachment with a named displine/domain. 
+domain_name  |String|Tags the attachment with a named discipline/domain. 
 
 The attributes are mandatory or optional depending on the service used.
 
@@ -43,7 +43,7 @@ EXPRESS rep:
 	"description": "Schema for attachment meta data, eeE REST API.",
 	"type": "object",
 			"properties": {
-				"repository_name": {
+				"project_name": {
 					"type": ["string","null"]
 				},
 				"model_guid ": {

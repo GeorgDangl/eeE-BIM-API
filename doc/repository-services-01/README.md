@@ -2,7 +2,7 @@
 
 [Level Up](../README.md)
 
-Version/Date: 2015.05.13 AET/EPM
+Version/Date: 2015.07.03 AET/EPM  API v0.3 repository_id in stead of name, formalized project_name in metadata
 
 For feedback and comments on earlier specification list see:
 

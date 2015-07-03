@@ -19,11 +19,11 @@ Out  	|model_meta_data	|[model_meta_data](./a_schemata/model_meta_data.md)	| Mod
 
 ##REST/JSON interface
 
-For consistency, repository_name is given in the resource URL. 
+For consistency, repository_id is given in the resource URL. Since the model GUID uniquely defines model, it can be omitted.
 
 Element | Content|
 --------|--------|
-**Resource URL** 	|*DELETE /eee-repos/{version}/{repository_name}/models/{model_guid}*
+**Resource URL** 	|*DELETE /eee-repos/{version}/{repository_id}/models/{model_guid}*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.
 *repository_name*	|States which server repository to use. If not given, the default repository will be used. If the repository does not exist, an error will be raised.
@@ -34,10 +34,10 @@ JSON Schema not available (trivial)
 
 ##REST/JSON Example
 
-This example uses default repository by not supplying one
+This example omits repository by not supplying one, using model GUID to identify model. 
 ```
 
-DELETE https://example.com/eee-repos/0.2/models/ABCD2233
+DELETE https://example.com/eee-repos/0.3/models/ABCD2233
 
 Request:
 	n.a
