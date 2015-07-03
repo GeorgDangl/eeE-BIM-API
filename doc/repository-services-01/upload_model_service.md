@@ -17,7 +17,7 @@ Out 	|Model Meta Data 	|[model_meta_data](./a_schemata/model_meta_data.md)	|Full
 
 The following model meta data fields are mandatory:
 
-* project_name :States which project the model belongs to.
+* project_id :States which project the model belongs to.
 * model_name : Name of the model. If a model with this name and same domain already exists, an error will be raised
 * model_type : Type of the model (e.g. IFC2x3, IFC4, XML, CSV, ifcXML, ….) 
 * domain_name: Tags the model with a named displine/domain. If the discipline does not exist, it will  be created.
