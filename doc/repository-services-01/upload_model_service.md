@@ -29,7 +29,6 @@ Element | Content|
 **Resource URL** 	|*POST /eee-repos/{version}/{repository_name}/models*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.
-*repository_id*	    |States which server repository to use. If not given, the default repository will be used. If the repository does not exist, an error will be raised.
 
 * [Upload Model Schema](upload_model_schema.md)
 * [Upload Model Example](upload_model_example.md)

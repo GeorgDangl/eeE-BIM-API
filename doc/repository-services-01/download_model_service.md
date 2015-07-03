@@ -24,10 +24,9 @@ The model URL must in any case be used as defined by [List Models Service](list_
 
 Element | Content|
 --------|--------|
-**Resource URL** 	|*GET /eee-repos/{version}/{repository_id}/models/{model_guid}*
+**Resource URL** 	|*GET /eee-repos/{version}/models/{model_guid}*
 *eee-repos*			|Shorthand for eeEmbedded Repository Services
 *version*			|States version of the API to use, allowing multiple versions of API for upgrading.
-*repository_id*	    |States which server repository to use. If not given, the default repository will be used. If the repository does not exist, an error will be raised.
 *model_guid*		|identifies the model
 
 
