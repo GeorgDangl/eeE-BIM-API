@@ -36,7 +36,7 @@ JSON Schema not available (trivial)
 
 This example shows two versions of one model and one version of another
 ```
-GET https://example.com/eee-repos/0.3/munchen-parkhaus/models
+GET https://example.com/eee-repos/0.3/rep1/models
 
 Request:
 	n.a
