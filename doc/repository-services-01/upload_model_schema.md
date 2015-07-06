@@ -23,7 +23,7 @@ The schemata in this page is derived from the "ORIGINAL" meta data schema
 				"guid ": {
 					"type": ["string","null"]
 				},
-				"project_name": {
+				"project_id": {
 					"type": ["string","null"]
 				},
 				"model_name": {
