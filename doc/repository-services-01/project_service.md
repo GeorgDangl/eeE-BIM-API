@@ -9,8 +9,8 @@ Version/Date: 2015.07.10 AET/EPM  API v0.4+ (in progress)
 
 **Resource URL**: *GET /eee-repos/{version}/projects*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.|
 
@@ -49,8 +49,8 @@ Response:
 ## Retrieve Project
 **Resource URL**: *GET /eee-repos/{version}/projects/**project_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	| identifies the project to retrieve
@@ -80,8 +80,8 @@ Response:
 ## Create Project
 **Resource URL**: *POST /eee-repos/{version}/projects*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 JSON body	|[project_meta_data](./schemata/project_meta_data.md) for the project to create. 
@@ -113,8 +113,8 @@ Response:
 ## Update Project
 **Resource URL**: *PUT /eee-repos/{version}/projects/**project_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Identifies which project to update 
@@ -149,8 +149,8 @@ Response:
 ## Delete Project
 **Resource URL**: *DELETE /eee-repos/{version}/projects/**project_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Identifies which project to delete 

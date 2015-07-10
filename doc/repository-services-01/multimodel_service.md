@@ -14,8 +14,8 @@ If **name locking** is used multi-models may be handled "implicit" by uploading 
 
 **Resource URL**: *GET /eee-repos/{version}/projects/project-id/multimodels*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.|
 *project_id*	|Project to list multimodels for. If skipped, all multimodels in server is listed
@@ -58,8 +58,8 @@ Response:
 ## Retrieve Multi-model
 **Resource URL**: *GET /eee-repos/{version}/projects/project-id/multimodels/multimodel_id*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to look for list multimodel in. If skipped, entire server is searched for matching all multimodel
@@ -90,8 +90,8 @@ Here server return no URL to the multimodel definition, indicating it is not sup
 ## Create Multimodel
 **Resource URL**: *POST /eee-repos/{version}/projects/project_id/multimodels*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to create multimodel in. 
@@ -127,8 +127,8 @@ Response:
 ## Update Multimodel
 **Resource URL**: *PUT /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to search multimodel in. 
@@ -169,8 +169,8 @@ Response:
 ## Delete Multimodel
 **Resource URL**: *DELETE /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to search multimodel in. 
