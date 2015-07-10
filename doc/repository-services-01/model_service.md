@@ -15,10 +15,11 @@ This is a requirement for the simplified interface called "confiormance level 1"
 
 Models:
 
-* [Delete Model Service](delete_model_service.md)
-* [Download Model Service](download_model_service.md)
-* [List Models Service](list_model_service.md)
-* [Upload Model Service](upload_model_service.md)
+* [Delete Model Service](model_service_delete.md)
+* [Download Model Service](model_service_download.md)
+* [List Models Service](model_service_list.md)
+* [Update Model Service](model_service_update.md)
+* [Upload Model Service](model_service_upload.md)
 
 
 
