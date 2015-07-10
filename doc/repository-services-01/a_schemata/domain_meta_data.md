@@ -14,8 +14,6 @@ For each domain the following attributes are used for domain meta data, as membe
 -------------|------|---------|
 project_id   |String|Id for the project this domain belongs to
 project_name |String|Names the project this domain belongs to
-multimodel_id|String|Id for the multimodel this domain belongs to
-multimodel_name |String|Name for the multimodel this domain belongs to
 domain_id    |String|Id for the domain
 domain_name |String|Name for the domain
 description  |String|Human readable description of the domain, informative only, no functional impact
@@ -36,8 +34,6 @@ The attributes are mandatory or optional depending on the service used.
 			"properties": {
 				"project_id": {"type": ["string","null"]},
 				"project_name": {"type": ["string","null"]},
-				"multimodel_id ": {"type": ["string","null"]
-				"multimodel_name ": {"type": ["string","null"]
 				"domain_id ": {"type": ["string","null"]
 				"domain_name ": {"type": ["string","null"]
 				"description": {"type": ["string","null"]}

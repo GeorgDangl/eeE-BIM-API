@@ -19,12 +19,18 @@ popd
 rem convert the files
 call %MD2_CMD% README
 call %MD2_CMD% repository-services-01\README
-call %MD2_CMD% repository-services-01\nem-feedback
-call %MD2_CMD% repository-services-01\edm_file_transfer
 
 call %MD2_CMD% repository-services-01\a_schemata\README
 call %MD2_CMD% repository-services-01\a_schemata\attachment_meta_data
+call %MD2_CMD% repository-services-01\a_schemata\domain_meta_data
 call %MD2_CMD% repository-services-01\a_schemata\model_meta_data
+call %MD2_CMD% repository-services-01\a_schemata\multimodel_meta_data
+call %MD2_CMD% repository-services-01\a_schemata\project_meta_data
+
+call %MD2_CMD% repository-services-01\domain_service
+call %MD2_CMD% repository-services-01\model_service
+call %MD2_CMD% repository-services-01\multimodel_service
+call %MD2_CMD% repository-services-01\project_service
 
 call %MD2_CMD% repository-services-01\delete_model_service
 call %MD2_CMD% repository-services-01\download_model_service
@@ -38,8 +44,6 @@ call %MD2_CMD% repository-services-01\delete_attachment_service
 call %MD2_CMD% repository-services-01\download_attachment_service
 call %MD2_CMD% repository-services-01\list_attachment_service
 call %MD2_CMD% repository-services-01\upload_attachment_service
-
-call %MD2_CMD% repository-services-01\execute_query_service
 
 rem pause
 goto end
