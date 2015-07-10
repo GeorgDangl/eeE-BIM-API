@@ -17,8 +17,8 @@ Version/Date: 2015.07.10 AET/EPM  API v0.4+ (in progress)
 
 **Resource URL (2) **: *GET /eee-repos/{version}/projects/project-id/multimodels/multimodel-id/domains*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.|
 *project_id*	|Project to list domains for. If skipped, multimodel_id will implicitly define project
@@ -67,8 +67,8 @@ Response:
 ## Retrieve Domain
 **Resource URL**: *GET /eee-repos/{version}/projects/project-id/multimodels/multimodel_id/domains/EFFE*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to look for domain in. If skipped, entire server is searched for matching domain
@@ -95,8 +95,8 @@ Here server indicates that domain with id ***fbfb*** (HVAC above) is not used in
 ## Create Domain
 **Resource URL**: *POST /eee-repos/{version}/projects/project_id/domains*
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to create domain in. 
@@ -131,8 +131,8 @@ Response:
 ## Update Domain
 **Resource URL**: *PUT /eee-repos/{version}/projects/**project_id**/domains/**domain_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to search domain in. 
@@ -171,8 +171,8 @@ Response:
 ## Delete Domain
 **Resource URL**: *DELETE /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id***
 
-_|_  
---|--|
+element | explanation
+--------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to search domain in. 
