@@ -22,8 +22,7 @@ Alternatively, a client may use [Create Model](./model_service_create) service t
 
 When model data is a link (URL reference), both operations are simly implemented, in this case it is no need to use a two-step creat-upload sequence.
 
-
-
+---
 ### Upload new model version - data in local file
 
 
@@ -87,6 +86,7 @@ Response:
 }]
 ```
 
+---
 
 ### Upload new model version - data in URL reference
 
@@ -156,6 +156,7 @@ Response:
     }
 }]
 ```
+---
 
 ### Upload new model  - data in URL Reference
 
@@ -232,6 +233,7 @@ Response:
 }]
 ```
 
+---
 
 ### Upload new model - data in local file
 
