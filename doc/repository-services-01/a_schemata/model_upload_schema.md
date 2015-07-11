@@ -2,10 +2,10 @@
 
 * [Level Up](../README.md)
 * [Overview](./README.md)
-* [Upload Model Service](./upload_model_service.md)
-* [Upload Model Example](./upload_model_example.md)
+* [Upload Model Service](../model_service_upload.md)
+* [Upload Model Example](../model_service_upload_example.md)
 
-The schema for “model-meta-data” is same for response and request, but the rules for which fields that are supplied are different.
+The schema for [model-meta-data](./model_meta_data.md) is same for response and request, but the rules for which fields that are supplied are different.
 The schemata in this page is derived from the "ORIGINAL" meta data schema
 
 ###JSON Schema
