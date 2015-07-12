@@ -20,28 +20,19 @@ The schemata in this page is derived from the "ORIGINAL" meta data schema
 			"title": " model_meta_data ",
 			"type": "object"
 			"properties": {
-				"guid ": {
-					"type": ["string","null"]
-				},
-				"project_id": {
-					"type": ["string","null"]
-				},
-				"model_name": {
-					"required": true,
-					"type": "string"
-				},
-				"model_type ": {
-					"required": true,
-					"type": "string"
-				},
-				"schema_url": {
-					"type": ["string","null"]
-				},
-				"domain_name ": {
-					"type": ["string","null"]
-				},
-			}
-		},
+				"project_id": {"type": ["string","null"]},
+				"project_name": {"type": ["string","null"]},
+				"multimodel_id ": {"type": ["string","null"]
+				"multimodel_name ": {"type": ["string","null"]
+				"domain_id ": {"type": ["string","null"]
+				"domain_name ": {"type": ["string","null"]
+				"model_guid ": {"type": ["string","null"]},
+				"model_name": {"type": ["string","null"]},
+				"model_type ": {"type": ["string","null"]},
+				"model_version ": {"type": ["string","null"]},
+				"schema_url": {"type": ["string","null"]},
+				"description": {"type": ["string","null"]}
+				},		},
 		"model_is_external": {
 			"required": true,
 			"type": "boolean"
