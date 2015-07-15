@@ -2,12 +2,12 @@
 
 * [Model Services Overview](./model_service.md)
 
-Version/Date: 2015.07.10 AET/EPM  API v0.4+ (in progress)
+Version: 0.4 2015.07.15 AET
 
 
 **Resource URLs** 
 
-(1): *PUT /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id**/domains/**domain_id**/models/**model_id***
+(1): *PUT /eee-repos/{version}/projects/**project_id**/domains/**domain_id**/models/**model_id***
 
 (2): *PUT /eee-repos/{version}/models/**model_id***
 
@@ -16,7 +16,6 @@ element | explanation
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Identifies which project to look for model in 
-*multimodel_id*	|Identifies which multimodel to look for model in 
 *domain_id*	|Identifies which assiged domain to check for model 
 *model_id**	| Identifies which model to delete
 
@@ -35,11 +34,9 @@ field|comment
 ---|--
 *description* | Freely updateable
 *domain_id* | The model will be reassigned to an **existing** domain in same project. 
-*domain_name* | If multimodel domain autocreate is enabled, the model will be assigned to a **new** domain in same project. If domain name exists, the model will be reassigned to found domain in stead.
+*domain_name* | If  domain autocreate is enabled, the model will be assigned to a **new** domain in same project. If domain name exists, the model will be reassigned to found domain in stead.
 *model_name* | If **name locking** is used, the name cannot be changed. If not, it is freely updateable
 *model_type* | If model is stored as **file/blob** this field is freely updateable. If the model is stored according to an implemented database schema like IFC or similar, the type cannot be changed
-*multimodel_id* | The model will be moved to an **existing** multimodel in same project. 
-*multimodel_name* | If multimodel autocreate is enabled, the model will be moved to a **new** multimodel in same project. If multimodel name already exists, the model is moved in stead.
 *schema_url*| Freely updateable
 
 Other fields cannot be updated. Some error conditions:
@@ -66,8 +63,6 @@ Response:
     {
 	"project_id": "DABB",
 	"project_name": "oslo-office",
-	"multimodel_id":"3456",
-	"multimodel_name":"Main Building",
 	"domain_id": "fcfc",
 	"domain_name": "HVAC",
 	"model_guid": "ABCD2233",

@@ -3,7 +3,7 @@
 [Level Up](../README.md)
 [Overview](./README.md)
 
-Version/Date: 2015.07.10 AET/EPM  API v0.4+ (in progress)
+Version: 0.4 2015.07.15 AET
 
 ### IMPORTANT
 

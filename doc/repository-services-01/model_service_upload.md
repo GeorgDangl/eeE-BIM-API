@@ -2,7 +2,7 @@
 
 * [Model Services Overview](./model_service.md)
 
-Version/Date: 2015.07.11 AET/EPM  API v0.4+ (in progress)
+Version: 0.4 2015.07.15 AET
 
 There are four distinct functions for upload model:
 
@@ -16,11 +16,11 @@ The first one is a composite of two operations:
 * Create model - requires meta-data
 * Upload model data - requires model data "file"
 
-This is a bit challenging to do with a single HTTP request using JSON with standard software tools, but "workaroubnds" are perfectly possible. The option will be described last of the four. 
+This is a bit challenging to do with a single HTTP request using JSON with standard software tools, but "workarounds" are perfectly possible. The option will be described last of the four. 
 
 Alternatively, a client may use [Create Model](./model_service_create) service to create the model, and then use upload new model version service to supply the data.
 
-When model data is a link (URL reference), both operations are simly implemented, in this case it is no need to use a two-step creat-upload sequence.
+When model data is a link (URL reference), both operations are simply implemented, in this case it is no need to use a two-step create-upload sequence.
 
 ---
 ### Upload new model version - data in local file
@@ -54,7 +54,7 @@ It is possible, and sometimes necessary, to supply meta-data as URL parameters l
 
 Using a full URL like:
 
-* POST /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id**/domains/**domain_id**/models/*model_id*
+* POST /eee-repos/{version}/projects/**project_id**/domains/**domain_id**/models/*model_id*
 
 might also work, but the exact behaviour is not defined.
 
@@ -75,8 +75,6 @@ Response:
 	"project_name": "munchen-parkhaus",
 	"domain_id": "fdfd",
 	"domain_name": "HVAC",
-	"multimodel_id": "1112",
-	"multimodel_name": "HVAC_alt_1",
 	"model_type": "IFC4",
 	"model_name": "HVAC_alt_1",
 	"model_type": "IFC4",
@@ -116,7 +114,7 @@ Returns list containing single element {model_url, {[model meta data](./a_schema
 
 Using a full URL like:
 
-* POST /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id**/domains/**domain_id**/models/*model_id*
+* POST /eee-repos/{version}/projects/**project_id**/domains/**domain_id**/models/*model_id*
 
 might also work, but the exact behaviour is not defined.
 
@@ -146,8 +144,6 @@ Response:
 	"project_name": "munchen-parkhaus",
 	"domain_id": "fdfd",
 	"domain_name": "HVAC",
-	"multimodel_id": "1112",
-	"multimodel_name": "HVAC_alt_1",
 	"model_type": "IFC4",
 	"model_name": "HVAC_alt_1",
 	"model_type": "IFC4",
@@ -175,9 +171,7 @@ either | *project_id*	|Project to create model in, must exist
 or | *project_name*	|Project to create model in, must exist
 either | *domain_name*	|Domain to assign model to. If ***domain auto create*** is enabled, the domain is created on the fly if it does not exist 
 or |*domain_id*	|Domain to assign model to, must exist. 
-either | *multimodel_id*	| Multimodel to create model in, must exist
-or | *multimodel_name* | Name of model / multimodel
-or | *model_name* | Name of model / multimodel (recommended in stead of multimodel_name)
+ - | *model_name* | Name of model 
  - | *model_type* | "IFC2x3", "IFC4", "...." 
 (opt)| *schema_url* | Informative only at time of writing
 (opt)| *desciption* | Informative only
@@ -188,10 +182,9 @@ Returns list containing single element {model_url, {[model meta data](./a_schema
 
 **NOTE :**
 
-* If a model already exist inside a multimodel with same name and domain, a new version is created,if not a new model is created.
-*  The model name and multimodel name is always same with name locking. Using model_name field, if ***multimodel auto create*** is enabled, the multimodel is created on the fly if it does not exist. If autocreate is disabled, an error will be sent.  
-* It is also possible to "identify" an existing model with the "path" using project_id, multimodel_id and domain_id as indicated above. Same rule applies: if model name and domain name indicates an existing model, a new version is created. 
-* Put anoher way -if you send exactly the same request multiple times, the first one will create a new model, the subsequent ones will create new versions.
+* If a model already exist inside a project with same name and domain, a new version is created,if not a new model is created.
+* It is also possible to "identify" an existing model with the "path" using project_id and domain_id as indicated above. Same rule applies: if model name and domain name indicates an existing model, a new version is created. 
+* Put another way -if you send exactly the same request multiple times, the first one will create a new model, the subsequent ones will create new versions.
 
 **Example: **
 
@@ -222,8 +215,6 @@ Response:
 	"project_name": "munchen-parkhaus",
 	"domain_id": "fdfd",
 	"domain_name": "HVAC",
-	"multimodel_id": "1112",
-	"multimodel_name": "HVAC_alt_1",
 	"model_type": "IFC4",
 	"model_name": "HVAC_alt_1",
 	"model_type": "IFC4",
@@ -243,10 +234,10 @@ However, for thin stateless clients like web pages the possibility to create and
 
 * POST /eee-repos/{version}/models?*fieldname*=value&*fieldname*=value&,*fieldname*=value&...
 
-It is possible to (partly) use URL itself, the two URLs brelow are equivalent:
+It is possible to (partly) use URL itself, the two URLs below are equivalent:
 
-* POST /eee-repos/{version}/projects/*project_id*/multimodels/*multimodel_id*/domains/*domain_id*/models
-* POST /eee-repos/{version}/models?project_id="*project_id*"/multimodel_id="*multimodel_id*"/domain_id="*domain_id*"
+* POST /eee-repos/{version}/projects/*project_id*/domains/*domain_id*/models
+* POST /eee-repos/{version}/models?project_id="*project_id*&domain_id="*domain_id*"
 
 
 **Resource URL**: POST /eee-repos/{version}/models?*fieldname*=value&*fieldname*=value&,*fieldname*=value&...
@@ -261,9 +252,7 @@ either | *project_id*	|Project to create model in, must exist
 or | *project_name*	|Project to create model in, must exist
 either | *domain_name*	|Domain to assign model to. If ***domain auto create*** is enabled, the domain is created on the fly if it does not exist 
 or |*domain_id*	|Domain to assign model to, must exist. 
-either | *multimodel_id*	| Multimodel to create model in, must exist
-or | *multimodel_name* | Name of model / multimodel
-or | *model_name* | Name of model / multimodel (recommended in stead of multimodel_name)
+-  | *model_name* | Name of model 
  - | *model_type* | "IFC2x3", "IFC4", "...." 
 (opt)| *file_type* | ".ifc", ".xml", Necessary if model_type has more than one possible file type (NEW) 
 (opt)| *schema_url* | Informative only at time of writing
@@ -277,10 +266,9 @@ or  |*model_content*		|Attachment in multipart request: Input model data as "fil
 
 **NOTE :**
 
-* If a model already exist inside a multimodel with same name and domain, a new version is created,if not a new model is created.
-*  The model name and multimodel name is always same with name locking. Using model_name field, if ***multimodel auto create*** is enabled, the multimodel is created on the fly if it does not exist. If autocreate is disabled, an error will be sent.  
-* It is also possible to "identify" an existing model with the "path" using project_id, multimodel_id and domain_id as indicatee above. Same rule applies: if model name and domain name indicates an existing model, a new version is created. 
-* Put anoher way -if you send exactly the same request multiple times, the first one will create a new model, the subsequent ones will create new versions.
+* If a model already exist inside a project with same name and domain, a new version is created,if not a new model is created.
+* It is also possible to "identify" an existing model with the "path" using project_id and domain_id as indicated above. Same rule applies: if model name and domain name indicates an existing model, a new version is created. 
+* Put another way -if you send exactly the same request multiple times, the first one will create a new model, the subsequent ones will create new versions.
 
 **Example: **
 
@@ -303,8 +291,6 @@ Response:
 	"project_name": "munchen-parkhaus",
 	"domain_id": "fdfd",
 	"domain_name": "HVAC",
-	"multimodel_id": "1112",
-	"multimodel_name": "HVAC_alt_1",
 	"model_type": "IFC4",
 	"model_name": "HVAC_alt_1",
 	"model_type": "IFC4",

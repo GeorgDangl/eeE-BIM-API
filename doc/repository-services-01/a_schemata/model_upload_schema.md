@@ -5,6 +5,8 @@
 * [Upload Model Service](../model_service_upload.md)
 * [Upload Model Example](../model_service_upload_example.md)
 
+Version: 0.4 2015.07.15 AET
+
 The schema for [model-meta-data](./model_meta_data.md) is same for response and request, but the rules for which fields that are supplied are different.
 The schemata in this page is derived from the "ORIGINAL" meta data schema
 
@@ -22,8 +24,6 @@ The schemata in this page is derived from the "ORIGINAL" meta data schema
 			"properties": {
 				"project_id": {"type": ["string","null"]},
 				"project_name": {"type": ["string","null"]},
-				"multimodel_id ": {"type": ["string","null"]
-				"multimodel_name ": {"type": ["string","null"]
 				"domain_id ": {"type": ["string","null"]
 				"domain_name ": {"type": ["string","null"]
 				"model_guid ": {"type": ["string","null"]},

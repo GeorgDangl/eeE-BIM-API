@@ -3,7 +3,7 @@
 * [Level Up](../README.md)
 * [Overview](./README.md)
 
-Version/Date: 2015.07.10 AET/EPM  API v0.4+ (in progress)
+Version: 0.4 2015.07.15 AET
 
 **Important :**
 
@@ -15,22 +15,14 @@ Version/Date: 2015.07.10 AET/EPM  API v0.4+ (in progress)
 
 **Resource URL (1) **: *GET /eee-repos/{version}/projects/project-id/domains*
 
-**Resource URL (2) **: *GET /eee-repos/{version}/projects/project-id/multimodels/multimodel-id/domains*
 
 element | explanation
 --------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.|
-*project_id*	|Project to list domains for. If skipped, multimodel_id will implicitly define project
-*multimodel_id*	| Multimodel to list **used** domains for. If skipped, all domains in project will be listed. 
- |If both *project_id* and *multimodel_id* is skipped, all domains in server will be listed.
+*project_id*	|Project to list domains for. If skipped, all domains in server will be listed.
 
 Returns list of {domain_url, {domain_meta_data}}. JSON Schema not shown (trivial). If server does not support direct concept of domain, *domain_url* is not returned.
-
-** NOTE: **
-
-* Domains belong on project level. To retrieve a list of recommended domains for new model uploads, the list should be retrieved from project level, and not from multimodel level.
-* To retrive a list of domains acutally used in a multimodel level, add
 
 **Example (project level):**
 
@@ -40,7 +32,7 @@ GET https://example.com/eee-repos/0.4/projects/ABCD/domains
 
 Response:
 [{
-    "domain_url ": "http://example.com/eee-repos/0.4/projects/ABCD/multimodel/1234/domains/EFFE",
+    "domain_url ": "http://example.com/eee-repos/0.4/projects/ABCD/domains/EFFE",
     "domain_meta_data ":
     {
 	"project_id": "ABCD",
@@ -51,7 +43,7 @@ Response:
     }
 },
 {
-    "domain_url ": "http://example.com/eee-repos/0.4/projects/ABCD/multimodel/1234/domains/EFFE",
+    "domain_url ": "http://example.com/eee-repos/0.4/projects/ABCD/domains/EFFE",
     "domain_meta_data ":
     {
 	"project_id": "ABCD",
@@ -65,31 +57,26 @@ Response:
 
 
 ## Retrieve Domain
-**Resource URL**: *GET /eee-repos/{version}/projects/project-id/multimodels/multimodel_id/domains/EFFE*
+**Resource URL**: *GET /eee-repos/{version}/projects/project-id/domains/EFFE*
 
 element | explanation
 --------|-----------|
 *eee-repos*	|Shorthand for eeEmbedded Repository Services|
 *version*	|States version of the API to use, allowing multiple versions of API for upgrading.
 *project_id*	|Project to look for domain in. If skipped, entire server is searched for matching domain
-*multimodel*	|Multimodel to look for domain **usage** in. See below.
 
 Returns list containing single element {domain_url, {domain_meta_data}}. JSON Schema not shown (trivial). If domjain not found, return is empty list *[ ]*.
-
-**NOTE :**
-
-* Domain as usually attached to project level, so including the **multimodel** in the URL in practice checks whether this domain is *used* in the multimodel. 
 
 **Example:**
 
 ```
-GET https://example.com/eee-repos/0.4/projects/ABCD/multimodels/5678/domains/fbfb
+GET https://example.com/eee-repos/0.4/projects/ABCD/domains/fbfb
 
 Response:
 []
 ```
 
-Here server indicates that domain with id ***fbfb*** (HVAC above) is not used in multi-model ***5678***.
+Here server indicates that domain with id ***fbfb*** (HVAC above) is not used in project.
 
 
 ## Create Domain
@@ -169,7 +156,7 @@ Response:
 ```
 
 ## Delete Domain
-**Resource URL**: *DELETE /eee-repos/{version}/projects/**project_id**/multimodels/**multimodel_id***
+**Resource URL**: *DELETE /eee-repos/{version}/projects/**project_id**/domains/**domain_id***
 
 element | explanation
 --------|-----------|

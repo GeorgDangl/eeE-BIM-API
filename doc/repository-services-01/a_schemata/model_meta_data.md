@@ -3,7 +3,7 @@
 * [Level Up](../README.md)
 * [Overview](./README.md)
 
-Version: 0.4 2015.07.10 AET
+Version: 0.4 2015.07.15 AET
 
 Here is the components so far:
 
@@ -15,8 +15,6 @@ For each model the following attributes are used for model meta data, as members
 -------------|------|---------|
 project_id   |String|Id for the project this model belongs to
 project_name |String|Names the project this model belongs to
-multimodel_id|String|Id for the multimodel this model belongs to
-multimodel_name |String|Name for the multimodel this model belongs to
 domain_id    |String|Id for the domain this model belongs to
 domain_name |String|Name for the domain this model belongs to
 model_guid   |String|Unique identifier of the model. The guid is generated on the server, and differs between versions
@@ -42,8 +40,6 @@ The attributes are mandatory or optional depending on the service used.
 			"properties": {
 				"project_id": {"type": ["string","null"]},
 				"project_name": {"type": ["string","null"]},
-				"multimodel_id ": {"type": ["string","null"]
-				"multimodel_name ": {"type": ["string","null"]
 				"domain_id ": {"type": ["string","null"]
 				"domain_name ": {"type": ["string","null"]
 				"model_guid ": {"type": ["string","null"]},
